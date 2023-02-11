@@ -1,0 +1,2097 @@
+@charset "UTF-8";
+
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css);
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;500;600;700;800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+
+@font-face {
+    src: url(../fonts/bartender-bold-serif-webfont.woff);
+    font-family: bartender-bold;
+}
+
+@font-face {
+    font-family: bartender-semicondensed;
+    src: url(../fonts/bartender-semicondensed-sans-letterpress.woff2-webfont.woff);
+}
+
+@font-face {
+    font-family: lacrima_senza;
+    src: url(../fonts/hwreww_lacrimamg-senza-webfont.woff);
+}
+
+@font-face {
+    font-family: bartender;
+    src: url(../fonts/bartender-webfont.woff);
+}
+
+@font-face {
+    font-family: bartender-bold;
+    src: url(../fonts/the_bartender-bold-webfont.woff);
+}
+
+@font-face {
+    font-family: docktrin;
+    src: url(../fonts/docktrin-webfont.woff);
+}
+
+:root {
+    --primary: #856B39;
+    --light: #a28d63;
+    --white: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+
+    scroll-behavior: smooth;
+}
+
+body {
+   background-color: black;
+    width: 100%;
+    height: 100%;
+}
+
+#page_wrapper {
+    position: relative;
+
+}
+
+#page_wrapper::before {
+    content: '';
+    background-image: url(../img/paprika.jpg);
+    background-repeat: no-repeat;
+    position: absolute;
+    background-size: contain;
+    height: 20vh;
+    width: 20vw;
+    right: 100px;
+}
+
+#page_wrapper::after {
+    content: '';
+    background-image: url(../img/tomatoes.jpg);
+    background-repeat: no-repeat;
+    position: absolute;
+    background-size: contain;
+    height: 20vh;
+    width: 20vw;
+    top: 600px;
+}
+
+#contenuto_menu {
+    background-color: rgba(0, 0, 0, .8);
+    padding: 20px;
+    position: fixed;
+    align-items: center;
+    width: 100%;
+    top: 0;
+    display: grid;
+    z-index: 9999;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 5fr 2fr 1fr;
+    
+}
+
+.pallina {
+    position: relative;
+    grid-area: mn;
+    padding: 8px;
+    text-decoration: none;
+    color: white;
+    font-size: 23px;
+    font-family: bartender-semicondensed;
+
+}
+
+
+.main a:hover.pallina::after {
+    content: '';
+    position: absolute;
+    top: 95%;
+    height: 8px;
+    width: 8px;
+    border-radius: 100%;
+    left: 50%;
+    background-color: var(--primary);
+    color: var(--primary);
+    transition: color 0.3s ease;
+}
+
+
+.main a:hover {
+
+    color: var(--primary);
+    transition: color 0.3s ease;
+}
+
+
+.social a {
+    padding: 25px;
+    text-decoration: none;
+    color: var(--light);
+
+}
+
+.telefono {
+    display: block;
+    text-decoration: none;
+    color: var(--light);
+    font-size: 30px;
+    border: 1px solid var(--primary);
+    text-align: center;
+    padding: 5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .45);
+    width: 100%;
+}
+
+.telefono p {
+   padding: 5px;
+}
+
+.telefono:hover,
+input[type="submit"]:hover {
+    background-color: var(--primary);
+    color: black;
+    transition: 0.5s ease 0.2s;
+
+}
+
+#slider {
+    margin-top: 200px;
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    position: relative;
+}
+
+#testo {
+    position: absolute;
+    font-size: 120px;
+    text-transform: uppercase;
+    font-family: bartender-semicondensed;
+    color: var(--primary);
+    text-align: center;
+    left: 650px;
+    line-height: 300px;
+}
+
+#testo span {
+
+    display: block;
+    border-top: 2px solid var(--primary);
+    border-bottom: 2px solid var(--primary);
+    transform: rotate(315deg);
+    font-size: 60px;
+    line-height: 40px;
+    width: 40px;
+    margin: 0 auto;
+    padding: 10px 0;
+
+}
+
+
+
+.icons {
+    width: 400px;
+    margin-top: 600px;
+    color: white;
+    margin-right: 400px;
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+.icons_image,
+.icons_image_1 {
+    display: grid;
+    grid-template-columns: 1fr 20fr;
+    grid-gap: 5px;
+
+
+
+}
+
+
+
+.loca,
+.loca_1 {
+    font-family: bartender-semicondensed;
+    padding: 20px;
+    padding-top: 0;
+    line-height: 40px;
+
+
+}
+
+.icons span {
+    color: var(--light);
+
+}
+
+
+
+
+
+#specialita {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+#specialita p a {
+    text-decoration: none;
+    color: var(--primary);
+}
+
+#scopri {
+    display: block;
+    text-decoration: none;
+    font-family: bartender-semicondensed;
+    text-align: center;
+    padding: 20px;
+    width: 500px;
+    font-size: 45px;
+    margin: 0 auto;
+    border-top: 2px solid var(--primary);
+    border-bottom: 2px solid var(--primary);
+
+}
+
+#scopri:hover,
+#specialita p a:hover {
+    background-color: var(--primary);
+    color: white;
+    transition: color 0.3s ease, ease-in-out 2s;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .45);
+}
+
+
+
+#specialita p:nth-child(2) {
+    display: block;
+
+    padding: 40px;
+    color: white;
+    font-size: 26px;
+    background-color: rgba(0, 0, 0, .8);
+    line-height: 35px;
+    font-family: lacrima_senza;
+
+
+
+}
+
+#cosa_facciamo {
+    position: relative;
+    margin-top: 350px;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    color: var(--white);
+    padding-top: 0;
+}
+
+
+#cosa_facciamo_piatto {
+    position: absolute;
+    padding-left: 20px;
+    border-left: 70px solid var(--light);
+}
+
+#cosa_facciamo_dish {
+    padding-right: 20px;
+
+}
+
+#cosa_facciamo_img {
+    transform: rotate(331deg);
+    margin: 0;
+}
+
+
+h1 {
+    font-size: 45px;
+    font-family: bartender-semicondensed;
+    width: 250px;
+    color: var(--primary);
+    margin: 0 auto;
+    border-bottom: 3px solid var(--primary);
+
+
+}
+
+#nostri_piatti {
+    padding: 30px;
+    padding-top: 0;
+}
+
+#cosa_facciamo p,
+#area_bambini p,
+#chi_siamo p,
+#unisciti p {
+    padding: 30px;
+    display: block;
+
+    word-spacing: 5px;
+    font-size: 26px;
+    font-family: lacrima_senza;
+    color: var(--white);
+    letter-spacing: 2px;
+}
+
+
+#cosa_facciamo p {
+    width: 600px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+
+
+#nostri_piatti::after {
+    position: absolute;
+    content: '';
+    background-image: url(../img/vege.jpeg);
+    width: 30vw;
+    height: 30vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    right: 27%;
+    top: 500px;
+}
+
+#contenuto_bambini {
+    position: relative;
+    padding: 20px;
+
+    margin: 0 auto;
+    top: 100px;
+    text-align: center;
+}
+
+#foto_bambini {
+    padding: 30px;
+}
+
+#area_bambini p {
+
+    margin-top: 50px;
+
+
+}
+
+#area_bambini p span {
+
+    color: var(--light);
+}
+
+h2 {
+    font-size: 28px;
+    color: var(--primary);
+    font-family: bartender-semicondensed;
+    padding: 10px;
+
+
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    border-bottom: 2px solid var(--primary);
+    height: 15px;
+    width: 100px;
+    margin-left: 40px;
+
+
+}
+
+h2::before {
+    content: '';
+    position: absolute;
+    border-bottom: 2px solid var(--primary);
+    height: 15px;
+    width: 100px;
+    margin-left: -140px;
+}
+
+
+
+#chi_siamo {
+    position: relative;
+    display: flex;
+    padding: 30px;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+
+#chi_siamo h1 {
+    border: none;
+    margin: 0;
+}
+
+#chi_siamo h1::after {
+    content: '';
+    position: absolute;
+    border-bottom: 5px solid var(--primary);
+    height: 26px;
+    width: 300px;
+    margin-left: 20px;
+}
+
+#chi_siamo p {
+    padding: 0px;
+    padding-top: 20px;
+    text-align: left;
+    width: 500px;
+
+}
+
+#elementi_destra::after {
+    content: '';
+    position: absolute;
+    background-image: url(../img/CHEF.jpg);
+    width: 250px;
+    height: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    right: 10%;
+    top: 40%;
+}
+
+
+#contatti {
+    display: flex;
+    position: relative;
+    padding: 30px;
+    margin-top: 100px;
+
+}
+
+#elementi_contatti {
+
+    border-radius: 20px;
+    width: 700px;
+    background-color: #232323;
+    margin-left: 120px;
+}
+
+#elementi_contatti h1 {
+    position: absolute;
+    border: none;
+    margin-left: 100px;
+
+    top: 80px;
+}
+
+#elementi_contatti::before {
+    content: '';
+    position: absolute;
+    border-bottom: 5px solid var(--primary);
+    height: 26px;
+    width: 150px;
+    margin-left: -80px;
+    top: 80px;
+}
+
+
+#mappa {
+    color: black;
+    position: absolute;
+    top: 15%;
+    left: 40%;
+}
+
+
+
+.icons_1 {
+    color: white;
+    margin: 0;
+    margin-top: 100px;
+    padding-left: 20px;
+    font-size: 28px;
+    padding: 0px;
+    padding-top: 10px;
+    width: 400px;
+
+}
+
+.logo_1 {
+    color: var(--light);
+    padding-left: 15px;
+}
+
+.messaggio,
+.message {
+    text-transform: lowercase;
+
+    padding-top: 30px;
+    width: 400px;
+    padding-bottom: 30px;
+    margin-left: 100px;
+
+}
+
+.messaggio::first-letter,
+.message::first-letter {
+    text-transform: uppercase;
+
+
+}
+
+
+_#contenitore_form {
+    margin: 0 auto;
+}
+
+
+
+label,
+input,
+textarea {
+    font-family: dosis;
+    font-size: 15px;
+    color: #78797a;
+    width: 300px;
+}
+
+.message textarea {
+    text-transform: lowercase;
+
+    width: 400px;
+    padding-bottom: 30px;
+
+    font-size: 15px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 15px;
+
+}
+
+textarea {
+    resize: none;
+}
+
+.invia_1,
+.invia_2 {
+    margin: 0 auto;
+    height: 50px;
+
+    padding: 10px;
+    border-radius: 25px;
+    font-family: dosis;
+}
+
+
+
+
+
+
+
+#unisciti {
+    width: 900px;
+    margin: 0 auto;
+    margin-top: 100px;
+    border: 2px solid var(--primary);
+
+}
+
+#unisciti h1 {
+    width: 230px;
+
+}
+
+
+#unisciti p {
+    width: 800px;
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+.email {
+    margin: 0 auto;
+    width: 300px;
+
+
+}
+
+.invia_1 {
+
+    width: 200px;
+    margin: 0 auto;
+}
+
+.invia_2 {
+    width: 300px;
+}
+
+input[type="submit"] {
+    font-size: 30px;
+    margin: 0 auto;
+    border-radius: 32px;
+    border: 2px solid var(--primary);
+    color: var(--light);
+    background-color: #000;
+    font-family: dosis;
+}
+
+footer {
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    color: var(--white);
+    margin-top: 10px;
+}
+
+footer p {
+    padding: 10px;
+}
+
+/*  MEDIA QUERIES */
+
+@media (min-width: 1928px) {
+    #responsive {
+        padding: 20px;
+        width: 100%;
+
+    }
+
+    #logo {
+        max-width: 100%;
+    }
+
+
+}
+
+
+@media only screen and (min-width: 1600px) and (max-width: 1919px) {
+    #contenuto_menu {
+
+        display: grid;
+
+        grid-gap: 20px;
+        grid-template-columns: 1fr 5fr 2fr 2fr;
+
+    }
+
+    
+
+    #cosa_facciamo_dish {
+        width: 450px;
+        height: 450px;
+    }
+
+    #cosa_facciamo_piatto {
+        width: 400px;
+        height: 550px;
+        padding: 20px;
+    }
+
+    P {
+        padding: 30px;
+    }
+
+    #nostri_piatti::after {
+        position: absolute;
+        content: '';
+        right: 40%;
+        top: 430px;
+    }
+
+    #mappa {
+        width: 800px;
+        margin-left: 70px;
+        top: 120px;
+    }
+
+
+    #fascia_mappa::after {
+        content: '';
+        width: 550px;
+        height: 550px;
+        background-size: cover;
+
+
+    }
+
+    .icons p {
+        width: 260px;
+    }
+
+}
+
+@media only screen and (min-width: 1280px) and (max-width: 1599px) {
+    #contenuto_menu {
+        display: grid;
+        grid-gap: 8px;
+        grid-template-columns: 1fr, 5fr, 2fr, 10fr;
+        width: 100%;
+    }
+
+    .social a {
+        padding: 10px;
+
+
+    }
+
+    .telefono {
+        
+        text-decoration: none;
+        color: var(--light);
+        font-size: 19px;
+    }
+
+
+
+    #testo {
+        top: 50px;
+
+        line-height: 100px;
+    }
+
+    .icons {
+        font-size: 25px;
+        margin-left: -200px;
+        width: 600px;
+
+    }
+
+    #specialita {
+        display: flex;
+        padding: 30px;
+        justify-content: space-between;
+      
+
+    }
+
+    #scopri {
+        width: 300px;
+        font-size: 35px;
+
+    }
+
+
+    #specialita p:nth-child(2) {
+        width: 100%;
+       padding: 0;
+       padding-top: 10px;
+
+    }
+
+    #pizza_napo {
+        
+        width: 550px;
+        height: 350px;
+        display: block;
+        background-size: cover;
+
+    }
+
+    #cosa_facciamo {
+        margin-top: 200px;
+
+    }
+
+
+
+    #cosa_facciamo_piatto {
+        width: 400px;
+        height: 500px;
+
+    }
+
+    #cosa_facciamo_dish {
+        width: 400px;
+        height: 400px;
+
+    }
+
+    #nostri_piatti {
+        z-index: 1;
+        background-color: rgba(0, 0, 0, .3);
+        margin-left: 180px;
+
+    }
+
+    #nostri_piatti::after {
+        right: 55%;
+
+    }
+
+    #chi_siamo {
+        justify-content: space-between;
+        padding: 30px;
+    }
+
+    #foto_destra {
+        background-size: contain;
+        width: 700px;
+    }
+
+    #mappa {
+        width: 500px;
+        margin-left: 200px;
+
+    }
+
+    #fascia_mappa::after {
+
+        width: 350px;
+        height: 350px;
+
+        right: 20px;
+        top: 800px;
+
+    }
+
+    .icons p {
+        width: 220px;
+    }
+}
+
+@media only screen and (min-width: 960px) and (max-width: 1279px) {
+    #testo {
+        font-size: 70px;
+        line-height: 100px;
+    }
+
+    #slider {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #piatto {
+        height: 400px;
+        width: 600px;
+    }
+
+
+    .icons_image p {
+
+        line-height: 30px;
+        width: 200px;
+    }
+
+    #page_wrapper::after {
+        top: 320px;
+    }
+
+    #scopri {
+        width: 200px;
+        font-size: 22px;
+        margin-left: 300px;
+    }
+
+
+    #specialita p:nth-child(2) {
+        width: 800px;
+        
+        font-size: 18px;
+    }
+
+    #pizza_napo {
+
+        width: 400px;
+        height: 250px;
+        padding: 0;
+
+    }
+
+    #cosa_facciamo {
+        margin-top: 200px;
+        padding-left: 100px;
+
+    }
+
+
+
+    #cosa_facciamo_piatto {
+        width: 300px;
+        height: 400px;
+
+    }
+
+    #cosa_facciamo_dish {
+        width: 300px;
+        height: 300px;
+
+    }
+
+    #nostri_piatti {
+        z-index: 1;
+        background-color: rgba(0, 0, 0, .3);
+        margin-left: 100px;
+
+    }
+
+    #cosa_facciamo p {
+        font-size: 18px;
+        width: 400px;
+    }
+
+    #nostri_piatti::after {
+        right: 55%;
+        top: 350px;
+
+    }
+
+    #foto_bambini {
+        padding: 30px;
+        width: 800px;
+        height: 500px;
+    }
+
+    #area_bambini p {
+        font-size: 18px;
+    }
+
+    #chi_siamo p {
+        font-size: 22px;
+    }
+
+    #foto_destra {
+        padding: 30px;
+    }
+
+    #mappa {
+        width: 350px;
+
+
+    }
+
+    #fascia_mappa::after {
+        width: 350px;
+        height: 350px;
+        right: 20px;
+        top: 800px;
+
+    }
+
+    .icons p {
+        width: 220px;
+    }
+
+    #chi_siamo {
+        justify-content: space-between;
+        padding: 30px;
+    }
+
+    #foto_destra {
+        background-size: contain;
+        width: 700px;
+    }
+
+    #mappa {
+        width: 500px;
+        height: 350px;
+        margin-left: 200px;
+
+    }
+
+    #fascia_mappa::after {
+
+        width: 220px;
+        height: 220px;
+
+        right: -150px;
+        top: 600px;
+
+    }
+
+    .icons {
+        margin-top: 300px;
+        justify-content: space-between;
+        font-size: 20px;
+        margin-left: -220px;
+    }
+
+    .icons_image {
+        display: grid;
+        grid-template-columns: 1fr 20fr;
+    }
+
+    .icons p {
+        width: 200px;
+        font-size: 20px;
+    }
+
+
+    #elementi_contatti {
+        height: 900px;
+        width: 600px;
+
+    }
+
+
+    label,
+    input,
+    textarea {
+        font-size: 12px;
+
+    }
+
+    .message textarea {
+        font-size: 12px;
+    }
+
+    input,
+    textarea {
+        width: 60%;
+
+    }
+
+    .messaggio,
+    .message {
+
+        padding: 0px;
+    }
+
+    input[type="submit"] {
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    #unisciti {
+        width: 600px;
+
+    }
+
+    #unisciti p {
+        font-size: 20px;
+        width: 500px;
+    }
+
+    #pizza_metro {
+        width: 700px;
+        height: 400px;
+        padding: 20px;
+    }
+
+}
+
+@media only screen and (min-width: 640px) and (max-width: 959px) {
+    #testo {
+        font-size: 50px;
+        line-height: 60px;
+    }
+
+    #testo span {
+        font-size: 25px;
+        line-height: 5px;
+        padding: 10px;
+    }
+
+
+    #slider {
+
+        display: flex;
+        justify-content: space-between;
+        margin-left: -100px;
+
+    }
+
+    #piatto {
+        margin-left: 90px;
+        height: 300px;
+        width: 450px;
+    }
+
+
+    .icons_image p {
+
+        line-height: 30px;
+        width: 200px;
+    }
+
+    #page_wrapper::after {
+        top: 320px;
+    }
+
+    #scopri {
+
+        width: 250px;
+        font-size: 22px;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+
+    #specialita p:nth-child(2) {
+        width: 600px;
+        padding-top: 15px;
+        font-size: 15px;
+        line-height: 22px;
+    }
+
+    #paragrafi {
+        margin-left: 130px;
+    }
+
+    .icons_image {
+        position: absolute;
+        margin-left: -400px;
+        line-height: 20px;
+        width: 600px;
+        top: 350px;
+
+
+    }
+
+    #page_wrapper::after {
+        display: none;
+    }
+
+    #pizza_napo {
+        position: absolute;
+        top: 350px;
+        margin-left: -400px;
+        width: 330px;
+        height: 200px;
+        padding: 0;
+
+    }
+
+    #cosa_facciamo {
+        margin-top: 100px;
+    }
+
+    #nostri_piatti {
+        margin-top: 300px;
+        margin-left: -500px;
+
+    }
+
+    #cosa_facciamo_img {
+        margin-top: 30px;
+        margin: 0 auto;
+        margin-left: 150px;
+
+    }
+
+
+
+
+    #cosa_facciamo_piatto {
+        width: 250px;
+        height: 300px;
+
+    }
+
+    #cosa_facciamo_piatto {
+
+        border-left: 40px solid var(--light);
+    }
+
+    #cosa_facciamo_dish {
+        width: 250px;
+        height: 250px;
+
+    }
+
+    #nostri_piatti {
+
+        background-color: rgba(0, 0, 0, .3);
+        margin-left: -500px;
+
+    }
+
+    #cosa_facciamo p {
+        font-size: 16px;
+        width: 650px;
+        margin: 0 auto;
+        padding-top: 15px;
+    }
+
+    #nostri_piatti::after {
+        display: none;
+
+    }
+
+    #foto_bambini {
+        margin: 0 auto;
+        padding: 30px;
+        width: 600px;
+        height: 400px;
+    }
+
+    #area_bambini p {
+        font-size: 16px;
+    }
+
+    #chi_siamo {
+        margin: 0 auto;
+
+        flex-direction: column-reverse;
+
+        padding: 30px;
+    }
+
+    #chi_siamo p {
+        font-size: 18px;
+    }
+
+    #foto_destra {
+        padding-bottom: 30px;
+        width: 500px;
+
+
+    }
+
+    #elementi_sinistra {
+
+        top: 400px;
+    }
+
+    #elementi_destra::after {
+        padding: 10px;
+        width: 200px;
+        height: 300px;
+
+        right: 10px;
+        top: 150px;
+    }
+
+    #fascia_mappa::after {
+        display: none;
+
+    }
+
+    #contatti {
+        position: relative;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    #elementi_contatti {
+        display: flex;
+        margin-top: 250px;
+        flex-direction: column;
+        background-color: #000;
+        margin-left: -30px;
+    }
+
+    #elementi_contatti h1 {
+        margin-left: 100px;
+        margin-top: 250px;
+    }
+
+    #elementi_contatti::before {
+        width: 60px;
+        margin-left: 20px;
+        margin-top: 250px;
+    }
+
+    .loca {
+        font-size: 22px;
+    }
+
+    .loca_1 {
+        width: 200px;
+        line-height: 20px;
+        font-size: 20px;
+        padding-left: 5px;
+    }
+
+    #mappa {
+        padding: 20px;
+        width: 600px;
+        left: 10px;
+        top: 0;
+        height: 300px;
+
+    }
+
+
+
+    #contenitore_form {
+        margin-left: -80px;
+    }
+
+
+
+    label,
+    input,
+    textarea {
+        font-size: 12px;
+
+    }
+
+    .message textarea {
+        font-size: 12px;
+    }
+
+    input,
+    textarea {
+        width: 50%;
+    }
+
+    .messaggio,
+    .message {
+
+        padding: 0px;
+    }
+
+    input[type="submit"] {
+        font-size: 16px;
+        padding: 10px;
+
+
+
+    }
+
+    #unisciti {
+        margin-top: 20px;
+        width: 400px;
+
+    }
+
+    #unisciti p {
+        font-size: 16px;
+        width: 400px;
+    }
+
+    #pizza_metro {
+        width: 550px;
+        height: 350px;
+        padding: 20px;
+    }
+
+}
+
+
+
+@media only screen and (min-width: 321px) and (max-width: 639px) {
+    #contenuto_menu{
+        width: 100%;
+        display: flex;
+        }
+
+    #logo_2 {
+        height: 77px;
+        width: 77px;
+    }
+
+    #testo {
+        z-index: 2;
+        width: 281px;
+        top: 177px;
+        background-color: rgba(0, 0, 0, .5);
+        left: 99px;
+        font-size: 44px;
+        line-height: 40px;
+
+    }
+
+    #testo span {
+        font-size: 20px;
+        width: 20px;
+        line-height: 10px;
+
+    }
+
+
+    #slider {
+        margin-top: 100px;
+        margin-left: -90px;
+
+    }
+
+    #piatto {
+        margin-left: 90px;
+        height: 220px;
+        width: 320px;
+    }
+
+
+    .icons_image p {
+        font-size: 16px;
+        line-height: 20px;
+        width: 200px;
+        padding-left: 1px;
+    }
+
+    #page_wrapper::after {
+        top: 320px;
+    }
+
+    #scopri {
+
+        width: 150px;
+        font-size: 16px;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+
+    #specialita p:nth-child(2) {
+        width: 350px;
+        padding-top: 15px;
+        font-size: 14px;
+        line-height: 15px;
+        
+
+    }
+
+   
+
+    .icons_image {
+        position: absolute;
+        margin-left: -300px;
+
+        width: 600px;
+        top: 450px;
+        font-size: 15px;
+
+
+    }
+
+    #page_wrapper::after {
+        display: none;
+    }
+
+    #pizza_napo {
+        position: absolute;
+        top: 250px;
+        margin-left: -380px;
+        width: 250px;
+        height: 180px;
+        padding: 0;
+    }
+
+    #cosa_facciamo {
+        margin-top: 50px;
+
+    }
+
+    #nostri_piatti {
+        margin-top: 300px;
+        margin-left: -500px;
+
+    }
+
+    h1 {
+        font-size: 30px;
+        width: 180px;
+    }
+
+    #cosa_facciamo_img {
+        margin-top: 30px;
+        margin: 0 auto;
+        margin-left: 55px;
+
+    }
+
+
+
+
+    #cosa_facciamo_piatto {
+        width: 150px;
+        height: 200px;
+        padding: 15px;
+
+    }
+
+    #cosa_facciamo_piatto {
+
+        border-left: 20px solid var(--light);
+    }
+
+    #cosa_facciamo_dish {
+        width: 160px;
+        height: 160px;
+        padding: 15px;
+
+    }
+
+    #nostri_piatti {
+        margin-top: 200px;
+        background-color: rgba(0, 0, 0, .3);
+        margin-left: -300px;
+
+
+
+    }
+
+    #cosa_facciamo p {
+        font-size: 14px;
+        width: 330px;
+        text-align: left;
+        padding-top: 15px;
+        line-height: 15px;
+    }
+
+    #nostri_piatti::after {
+        display: none;
+
+    }
+
+    #foto_bambini {
+        margin-top: 20px;
+        margin: 0 auto;
+        padding: 30px;
+        width: 320px;
+        height: 250px;
+        margin-left: -30px;
+
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+
+    h2::after {
+
+        height: 10px;
+        width: 30px;
+        margin-left: 15px;
+
+
+    }
+
+    h2::before {
+
+        height: 10px;
+        width: 30px;
+        margin-left: -42px;
+    }
+
+    #area_bambini p {
+        font-size: 14px;
+        text-align: left;
+        line-height: 15px;
+    }
+
+    #chi_siamo {
+        margin: 0 auto;
+
+        flex-direction: column-reverse;
+
+        padding: 30px;
+    }
+
+    #chi_siamo h1::after {
+        height: 16px;
+        width: 100px;
+
+    }
+
+    #chi_siamo p {
+        width: 280px;
+        font-size: 14px;
+        line-height: 15px;
+        margin-left: -15px;
+        text-align: left;
+    }
+
+    #foto_destra {
+        padding-bottom: 30px;
+        width: 250px;
+    }
+
+    #elementi_sinistra {
+        margin-top: 140px;
+    }
+
+    #elementi_destra::after {
+        padding: 10px;
+        width: 136px;
+        height: 210px;
+        right: 10px;
+        top: 130px;
+    }
+
+    #fascia_mappa::after {
+        display: none;
+
+    }
+
+    #contatti {
+        position: relative;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    #elementi_contatti {
+        display: flex;
+        margin-top: 250px;
+        flex-direction: column;
+        background-color: #000;
+        margin-left: -30px;
+    }
+
+    #elementi_contatti h1 {
+        margin-left: 100px;
+        margin-top: 250px;
+    }
+
+    #elementi_contatti::before {
+        width: 60px;
+        height: 15px;
+        margin-left: 20px;
+        margin-top: 250px;
+    }
+
+
+
+    .loca_1 {
+        width: 200px;
+        line-height: 20px;
+        font-size: 14px;
+        padding-left: 5px;
+    }
+
+    .icons_image_1 {
+        font-size: 14px;
+    }
+
+    #mappa {
+        padding: 20px;
+        width: 290px;
+        left: 8px;
+        top: 0;
+        height: 300px;
+
+    }
+
+
+
+    #contenitore_form {
+        margin-left: -80px;
+    }
+
+
+
+    label,
+    input,
+    textarea {
+        font-size: 12px;
+
+    }
+
+    .message textarea {
+        font-size: 10px;
+        width: 250px;
+        height: 120px;
+    }
+
+    input,
+    textarea {
+        width: 40%;
+    }
+
+    .messaggio,
+    .message {
+
+        padding: 0px;
+    }
+
+    input[type="submit"] {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    #unisciti {
+        margin-top: 20px;
+        width: 280px;
+
+    }
+
+    #unisciti h1 {
+        text-align: center;
+        width: 160px;
+
+    }
+
+    #unisciti p {
+        font-size: 14px;
+        width: 280px;
+    }
+
+    #pizza_metro {
+        width: 250px;
+        height: 200px;
+        padding: 20px;
+    }
+
+    .invia_2 {
+
+        margin-left: 60px;
+
+    }
+
+    .email {
+        margin: 0 auto;
+        margin-left: 60px;
+
+    }
+
+
+
+}
+
+
+@media only screen and (max-width: 1279px) {
+
+    .pallina,
+    .social {
+        display: none;
+
+    }
+
+    .menu_responsive {
+        display: block;
+        margin-right: 80px;
+        cursor: pointer;
+    }
+
+
+
+    .menu_responsive span {
+        display: block;
+        width: 20px;
+        height: 2px;
+        background-color: var(--primary);
+
+    }
+
+    .menu_responsive span:nth-child(2) {
+        margin: 5px 0;
+    }
+
+    #contenuto_menu {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .telefono {
+        margin: 0 auto;
+        width: 300px;
+    }
+}
+
+@media only screen and (max-width: 321px) {
+
+    .pallina,
+    .social {
+        display: none;
+
+    }
+
+    .menu_responsive {
+        display: block;
+        margin-left: 15px;
+        cursor: pointer;
+    }
+
+    #contenuto_menu {
+
+        padding: 10px;
+    }
+    .menu_responsive span {
+        display: block;
+        width: 20px;
+        height: 2px;
+        background-color: var(--primary);
+
+    }
+    .menu_responsive span:nth-child(2) {
+        margin: 5px 0;
+    }
+
+
+    .telefono p {
+        display: block;
+        width: 100px;
+        font-size: 15px;
+        margin: 0 auto;
+    }
+
+    .telefono {
+
+        margin-left: -10px;
+    }
+}
+
+/*CSS MENU*/
+
+#intro_header {
+    
+	width: 100%;
+    height: 100%;
+	align-items: center;
+	background-color: var(--primary);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 5px;
+}
+
+#intro_header p{
+	text-align: center;
+	text-transform: uppercase;
+	color: #fff;
+	font-size:40px;  
+    
+}
+
+#intro_header:after{
+	content: '';
+	width: 0px;
+	height: 0px;
+	display: block;
+	position: absolute;
+	top: 100px;
+	left: 50%;
+	margin-left: -40px ;
+	border-left: 40px solid transparent;
+	border-right: 40px solid transparent;
+	border-top: 40px solid var(--primary) ;
+}
+
+#wrapper{
+	margin: 50px auto;
+	
+    align-items: center;
+    
+    
+    
+}
+.contenitore_libri{
+	list-style: none;
+}
+
+.forma{
+	width: 300px;
+	height: 550px;
+	margin: 100px;
+    margin-left: 180px;
+	float: left;
+	perspective: 1000px;
+	box-shadow: -1px -1px 5px 0 rgba(50, 50, 50, 0.75);
+    
+}
+
+.scritte_sotto{
+    font-size: 38px;
+   margin-top: 220px;
+    
+    text-align: center;
+    color: var(--primary);
+    font-family: docktrin;
+}
+.libro{
+	width: 260px;
+	height: 400px;
+	transform-style: preserve-3d;
+	transform: translateZ(-130px);
+	transition: transform 5s;
+	cursor: pointer;
+	
+}
+
+.libro:hover {
+	transform: rotateY(-90deg) translateZ(20px);
+    
+
+}
+
+.libro .front, .libro .info{
+	position: absolute;
+	width: 400px;
+	height: 550px;
+	
+	backface-visibility: hidden;
+}
+
+.libro .front{
+	background-color: #ff8;
+	transform: translateZ(130px);
+	background-size: cover;
+	background-repeat: no-repeat;
+	
+}
+
+.libro .info {
+	transform:  rotateY(90deg) translateZ(130px);
+	border: 1px solid #ccc;
+	font-size: 12px;
+	background-color: var(--white);
+    
+}
+
+
+
+.libro:after{
+	content: "";
+	
+	position: absolute;
+	bottom: 0;
+	box-shadow: 0 30px 50px rgba(0,0,0,0.4);
+	transform: rotateX(90deg) translateY(130px);
+	background-color: rebeccapurple;
+	transform-origin: 100% 100%; 
+	
+}
+
+.libro:hover:after{
+	box-shadow: 50px -5px 50px rgba(0,0,0,0.4);
+}
+
+.info header{
+	color: #fff;
+	padding: 7px 10px;
+	font-weight: bold;
+	height: 195px;
+	background-repeat: no-repeat;
+	text-shadow: 0 1px 1px rgba(0,0,0,2);
+}
+
+.info header h1 {
+	margin: 10px 0 0 3px;
+	font-size: 20px;
+	text-align: center;
+}
+
+.info header .prezzo{
+	width: 50%;
+	margin-left: 25%;
+	margin-top: 40px;
+	padding: 10px;
+	float: left;
+	background: #ff0076;
+	color: #fff;
+	text-align: center;
+	border-radius: 5px;
+}
+
+.info header .autore{
+	width: 100%;
+	float: left;
+	margin-top: 20px;
+	text-align: center;
+}
+
+/*.info p{
+	padding: 19px 22px;
+	margin: 0;
+	font-weight: 700;
+	color: #666;
+	line-height: 18px;
+	
+}*/
+
+.libro .front{
+	box-shadow: inset 0px 0px 40px rgba(255,255,255,0);
+}
+
+.libro:hover .front{
+	box-shadow: inset 300px 0px 40px rgba(255,255,255,0.8);
+}
+
+.libro .info, .libro .info header{
+	box-shadow: inset -300px 0 40px rgba(0,0,0,0.5)
+}
+
+
+.libro:hover .info, .libro:hover .info header{
+	box-shadow: inset -300px 0 40px rgba(0,0,0,0.5)
+}
+
+.libro .front, .libro .info, .libro .info header{
+	transition: box-shadow 350ms;
+}
+
+.forma .info header{
+	background-color: #8500ff;
+}
+
+.forma:nth-child(1) .front{
+	background-image: url(../img/pexels-vincent-rivaud-2471171.jpg);
+
+}
+
+.forma:nth-child(2) .front{
+	background-image: url(../img/oca.jpg);
+}
+
+.forma:nth-child(3) .front{
+	background-image: url(../img/tira.jpg);
+}
+
+.arrow{
+    display: flex;
+    justify-content: space-between;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin: 10px;
+    margin-top: 500px;
+}
+
+
+button:focus{
+   outline: none;
+}
+
+button:hover i{
+    color: black;
+}
+
+i{
+    font-size: 20px;
+    /*color: red;*/
+}
+
+.menu_dolci{
+    position: relative;
+    
+}
+
+.paper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    perspective: 1500px;
+    
+}
+
+
+
+.page_1,
+ .page_2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: left;
+    transition: transform 0.5s;
+    
+    
+}
+
+.page_1{
+    z-index: 1; 
+    
+}
+
+
+.page_2{
+    z-index: 2; 
+}
+
+
+
